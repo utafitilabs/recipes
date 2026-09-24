@@ -26,9 +26,9 @@
 # application's composer.json, in the form the skeleton's install guide uses:
 #
 #   "repositories": [
-#       { "type": "vcs", "url": "https://github.com/uhifadhilabs/uhifadhi" },
-#       { "type": "vcs", "url": "https://github.com/uhifadhilabs/storage-module" },
-#       { "type": "vcs", "url": "https://github.com/uhifadhilabs/incident-module" }
+#       { "type": "vcs", "url": "https://github.com/utafitilabs/uhifadhi" },
+#       { "type": "vcs", "url": "https://github.com/utafitilabs/storage-module" },
+#       { "type": "vcs", "url": "https://github.com/utafitilabs/incident-module" }
 #   ]
 #
 # with `"minimum-stability": "dev"` and `"prefer-stable": true` beside them,

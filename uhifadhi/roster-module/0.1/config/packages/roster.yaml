@@ -21,7 +21,7 @@
 # application's composer.json:
 #
 #   "repositories": [
-#       { "type": "vcs", "url": "https://github.com/uhifadhilabs/uhifadhi" }
+#       { "type": "vcs", "url": "https://github.com/utafitilabs/uhifadhi" }
 #   ]
 #
 # with `"minimum-stability": "dev"` and `"prefer-stable": true` beside it,

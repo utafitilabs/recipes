@@ -31,7 +31,7 @@ jobs:
               # GenerateFlexEndpointCommand::execute (writes straight to the path).
               run: |
                   mkdir -p endpoint-out
-                  git ls-tree HEAD */*/* | php ../recipes-checker/run generate:flex-endpoint uhifadhilabs/recipes main flex/main endpoint-out
+                  git ls-tree HEAD */*/* | php ../recipes-checker/run generate:flex-endpoint utafitilabs/recipes main flex/main endpoint-out
 
             - name: Publish flex/main
               run: |
@@ -41,4 +41,4 @@ jobs:
                   git config user.email 'flex-endpoint@users.noreply.github.com'
                   git add -A
                   git commit -q -m "Regenerate Flex endpoint from $GITHUB_SHA"
-                  git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/uhifadhilabs/recipes.git" flex/main
+                  git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/utafitilabs/recipes.git" flex/main

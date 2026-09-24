@@ -13,7 +13,7 @@ GitHub organisation.
 
 ```bash
 composer config extra.symfony.endpoint \
-  '["https://api.github.com/repos/uhifadhilabs/recipes/contents/index.json?ref=flex/main", "flex://defaults"]'
+  '["https://api.github.com/repos/utafitilabs/recipes/contents/index.json?ref=flex/main", "flex://defaults"]'
 ```
 
 Composer's GitHub token authenticates access to this private repo.

@@ -13,7 +13,7 @@ named `#1`, `#2`, … become comment lines, in order).
 ## Recipes the skeleton itself installs
 
 `uhifadhi/seam-module` and `uhifadhi/shell-module` are shipped by the skeleton
-([`uhifadhi/uhifadhi`](https://github.com/uhifadhilabs/uhifadhi)), so their
+([`uhifadhi/uhifadhi`](https://github.com/utafitilabs/uhifadhi)), so their
 recipes have a second half: the skeleton's `symfony.lock` records the recipe
 version, its hash and the files it tracks, and that ledger is what tells a fresh
 `create-project` there is nothing to update. Change one of those two recipes —
