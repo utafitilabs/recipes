@@ -21,7 +21,6 @@ storage:
         # at once — gate it with the module-configuration permission the core's
         # team bundle publishes; without a permission catalogue, delete this
         # line and the bundle falls back to ROLE_ADMIN.
-        settings_permission: 'module.create'
         # What YOU call the place files go. Unset, the hub says "This server" or
         # "Object storage" according to the adapter, and never invents a vendor.
         storage_label: 'This server'
