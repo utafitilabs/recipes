@@ -14,19 +14,6 @@
 # which owns the station a watch is stood at, the posting that puts somebody
 # there, the check-in and the presence derived from it. This module owns the
 # plan and reads the presence; it computes none of it.
-#
-# UNTIL `uhifadhi/uhifadhi` IS ON PACKAGIST an installation names where it comes
-# from itself. Composer reads `repositories` from the ROOT package only — an
-# entry in a dependency's own composer.json is ignored — so it goes in the
-# application's composer.json:
-#
-#   "repositories": [
-#       { "type": "vcs", "url": "https://github.com/utafitilabs/uhifadhi" }
-#   ]
-#
-# with `"minimum-stability": "dev"` and `"prefer-stable": true` beside it,
-# because composer will not resolve a transitive dev dependency under a stable
-# floor. This module itself is on Packagist and needs no entry.
 roster:
     # Which catalogue category the Roster tile is filed under in every area.
     # OPERATIONS, because a roster is the rangers' OWN work — `pressure` in the

@@ -1,0 +1,6 @@
+# Telemetry console screens (uhifadhi/telemetry-module) — /telemetry and its
+# captures, crashes and live views. This file mounts them; the addresses are the
+# controllers' own, declared as attributes beside the code that answers them.
+telemetry:
+    resource: '@UhifadhiTelemetryBundle/src/Controller/'
+    type: attribute

@@ -1,0 +1,16 @@
+# Telemetry (uhifadhi/telemetry-module) — what the installation is doing:
+# captured requests, handset crashes and server errors, and a live tail.
+#
+# NOTHING BELOW IS REQUIRED. Every key has a default, and the tree is CLOSED, so
+# an invented key fails at compile time rather than being ignored. Delete the
+# whole `telemetry:` key and the monitor still runs on the values written out
+# here. What it does need is `TELEMETRY_DATABASE_URL` in `.env`, a database of
+# its own — a monitor that fills up must never slow the application's — and
+# `php bin/console telemetry:migrate` once to create its schema.
+telemetry:
+    connection: telemetry           # the DBAL connection the stores write to, prepended from TELEMETRY_DATABASE_URL
+    body_cap: 65536                 # total stored body budget per capture
+    base64_field_threshold: 2048    # a field at/over this is stored as a digest
+    retention_days: 30              # default window for telemetry:prune
+    crash_body_cap: 65536           # hard size cap on a crash ingest body
+    error_frame_cap: 24             # stack frames kept per recorded server error

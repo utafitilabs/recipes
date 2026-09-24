@@ -1,0 +1,19 @@
+{
+    "bundles": {
+        "Uhifadhi\\Telemetry\\UhifadhiTelemetryBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "The telemetry module's sink: a database of its OWN, never the application's. The",
+        "#2": "module prepends a second DBAL connection from this variable, so it has to be",
+        "#3": "declared; create the schema with `php bin/console telemetry:migrate`.",
+        "TELEMETRY_DATABASE_URL": "postgresql://app:!ChangeMe!@127.0.0.1:5432/app_telemetry?serverVersion=16&charset=utf8",
+        "#4": "The live tail publishes through a Mercure hub. Leave MERCURE_URL empty and the",
+        "#5": "console still records; the live view names the setting it is waiting for.",
+        "MERCURE_URL": "",
+        "MERCURE_PUBLIC_URL": "",
+        "MERCURE_JWT_SECRET": "!ChangeThisMercureHubJWTSecretKey!"
+    }
+}
