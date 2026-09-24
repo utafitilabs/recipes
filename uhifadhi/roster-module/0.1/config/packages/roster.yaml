@@ -121,7 +121,7 @@ when@test:
 # withheld, the area is simply not running it. Turn it on per area from the
 # area's Modules page.
 #
-# AND GRANT THE PERMISSION. This module declares one, `roster.manage`, and
+# AND GRANT IT. This module declares one concern, `roster`, and
 # grants it to nobody: changing how an area runs its roster — the rotations,
 # what each post's watch expects, the settings — needs it. Assign it in Team's
 # permission matrix. Reading the pages needs nothing.
