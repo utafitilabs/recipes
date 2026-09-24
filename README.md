@@ -7,7 +7,10 @@ generated into the `flex/main` branch by the GitHub Action on every push to
 
 Recipes are keyed by **composer package name**, which is why the directories
 here are `uhifadhi/…` while the repository itself lives under the `uhifadhilabs`
-GitHub organization.
+GitHub organization. The generic packages an installation also needs are keyed
+the same way, under `utafitilabs/…` — `utafitilabs/element-bundle` is one: a
+library any Symfony application can install, whose recipe happens to live in the
+endpoint these installations already read.
 
 ## Use in an app
 
