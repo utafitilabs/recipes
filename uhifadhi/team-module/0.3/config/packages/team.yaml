@@ -49,5 +49,5 @@ team:
 
     # What those letters call this installation in their subject line. The
     # default is the product, never somebody's authority — a default naming an
-    # organisation would be a lie on every other installation.
+    # organization would be a lie on every other installation.
     installation_name: 'Uhifadhi'

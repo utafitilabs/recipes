@@ -7,7 +7,7 @@ generated into the `flex/main` branch by the GitHub Action on every push to
 
 Recipes are keyed by **composer package name**, which is why the directories
 here are `uhifadhi/…` while the repository itself lives under the `uhifadhilabs`
-GitHub organisation.
+GitHub organization.
 
 ## Use in an app
 
