@@ -8,5 +8,11 @@
     },
     "copy-from-recipe": {
         "config/": "%CONFIG_DIR%/"
+    },
+    "env": {
+        "#1": "The longest one SQL statement of a web request may run, in milliseconds, before",
+        "#2": "PostgreSQL cancels it; 0 is no limit. The console and the queue worker never have it.",
+        "#3": "config/packages/registry.yaml, registry.statement_timeout_ms.",
+        "DATABASE_STATEMENT_TIMEOUT_MS": "10000"
     }
 }
