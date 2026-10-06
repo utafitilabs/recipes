@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "vivutio/property-module": {
+            "manifest": {
+                "bundles": {
+                    "Vivutio\\Property\\VivutioPropertyBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/property.yaml": {
+                    "contents": [
+                        "# The properties module's pages (vivutio/property-module): the register, a",
+                        "# property's page and its configure page, under /properties. The addresses are",
+                        "# the controller's own attributes; this file is what mounts them, and it is",
+                        "# yours: remove the import and the pages are gone.",
+                        "property:",
+                        "    resource: '@VivutioPropertyBundle/src/Controller/'",
+                        "    type: attribute",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ec2f9e7914b3ec7414fec0faf8136d9b7e1b0814"
+        }
+    }
+}
