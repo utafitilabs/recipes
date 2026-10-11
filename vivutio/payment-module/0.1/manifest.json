@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Vivutio\\Payment\\VivutioPaymentBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}
