@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "vivutio/payment-module": {
+            "manifest": {
+                "bundles": {
+                    "Vivutio\\Payment\\VivutioPaymentBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/payment.yaml": {
+                    "contents": [
+                        "# The payment module's pages (vivutio/payment-module): what is owed and paid,",
+                        "# under /payments. This file is what mounts them, and it is yours: remove the",
+                        "# import and the pages are gone.",
+                        "payment:",
+                        "    resource: '@VivutioPaymentBundle/src/Controller/'",
+                        "    type: attribute",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "d7201a3f37d074f9da2f51269467f9e3f3687366"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "vivutio/ticketing-module": {
+            "manifest": {
+                "bundles": {
+                    "Vivutio\\Ticketing\\VivutioTicketingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/ticketing.yaml": {
+                    "contents": [
+                        "# The ticketing module's pages (vivutio/ticketing-module): tickets and the",
+                        "# carriers they are bought from, under /tickets. This file is what mounts",
+                        "# them, and it is yours: remove the import and the pages are gone.",
+                        "ticketing:",
+                        "    resource: '@VivutioTicketingBundle/src/Controller/'",
+                        "    type: attribute",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "ef1f258d8b6ac2fd66f73ced096e335db14a5ee4"
+        }
+    }
+}

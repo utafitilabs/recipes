@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "vivutio/front-desk-module": {
+            "manifest": {
+                "bundles": {
+                    "Vivutio\\FrontDesk\\VivutioFrontDeskBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/front_desk.yaml": {
+                    "contents": [
+                        "# The front desk's pages (vivutio/front-desk-module): the places it serves, a",
+                        "# place's board and its actions, under /front-desk. This file is what mounts",
+                        "# them, and it is yours: remove the import and the pages are gone.",
+                        "front_desk:",
+                        "    resource: '@VivutioFrontDeskBundle/src/Controller/'",
+                        "    type: attribute",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "b6b6b76353de87016de7c7fd733f108ecf79471f"
+        }
+    }
+}

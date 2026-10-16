@@ -1,0 +1,31 @@
+{
+    "manifests": {
+        "vivutio/sourcing-module": {
+            "manifest": {
+                "bundles": {
+                    "Vivutio\\Sourcing\\VivutioSourcingBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                }
+            },
+            "files": {
+                "config/routes/sourcing.yaml": {
+                    "contents": [
+                        "# The sourcing module's pages (vivutio/sourcing-module): rooms requested from",
+                        "# partners, under /sourcing. This file is what mounts them, and it is yours:",
+                        "# remove the import and the pages are gone.",
+                        "sourcing:",
+                        "    resource: '@VivutioSourcingBundle/src/Controller/'",
+                        "    type: attribute",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "193aef71c9756ddaeddef56e29aec2f539075440"
+        }
+    }
+}

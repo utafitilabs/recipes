@@ -1,0 +1,61 @@
+{
+    "manifests": {
+        "uhifadhi/telemetry-module": {
+            "manifest": {
+                "bundles": {
+                    "Uhifadhi\\Telemetry\\UhifadhiTelemetryBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "#1": "The telemetry module's sink: a database of its OWN, never the application's. The",
+                    "#2": "module prepends a second DBAL connection from this variable, so it has to be",
+                    "#3": "declared; create the schema with `php bin/console telemetry:migrate`.",
+                    "TELEMETRY_DATABASE_URL": "postgresql://app:!ChangeMe!@127.0.0.1:5432/app_telemetry?serverVersion=16&charset=utf8",
+                    "#4": "The live tail publishes through the Mercure hub the mercure bundle's own recipe",
+                    "#5": "configures (MERCURE_URL and friends); this module adds nothing to those."
+                }
+            },
+            "files": {
+                "config/packages/telemetry.yaml": {
+                    "contents": [
+                        "# Telemetry (uhifadhi/telemetry-module) \u2014 what the installation is doing:",
+                        "# captured requests, handset crashes and server errors, and a live tail.",
+                        "#",
+                        "# NOTHING BELOW IS REQUIRED. Every key has a default, and the tree is CLOSED, so",
+                        "# an invented key fails at compile time rather than being ignored. Delete the",
+                        "# whole `telemetry:` key and the monitor still runs on the values written out",
+                        "# here. What it does need is `TELEMETRY_DATABASE_URL` in `.env`, a database of",
+                        "# its own \u2014 a monitor that fills up must never slow the application's \u2014 and",
+                        "# `php bin/console telemetry:migrate` once to create its schema.",
+                        "telemetry:",
+                        "    connection: telemetry           # the DBAL connection the stores write to, prepended from TELEMETRY_DATABASE_URL",
+                        "    body_cap: 65536                 # total stored body budget per capture",
+                        "    base64_field_threshold: 2048    # a field at/over this is stored as a digest",
+                        "    retention_days: 30              # default window for telemetry:prune",
+                        "    crash_body_cap: 65536           # hard size cap on a crash ingest body",
+                        "    error_frame_cap: 24             # stack frames kept per recorded server error",
+                        ""
+                    ],
+                    "executable": false
+                },
+                "config/routes/telemetry.yaml": {
+                    "contents": [
+                        "# Telemetry console screens (uhifadhi/telemetry-module) \u2014 /telemetry and its",
+                        "# captures, crashes and live views. This file mounts them; the addresses are the",
+                        "# controllers' own, declared as attributes beside the code that answers them.",
+                        "telemetry:",
+                        "    resource: '@UhifadhiTelemetryBundle/src/Controller/'",
+                        "    type: attribute",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "3d0d57fe56f93fec9378b449e98f3c5982409ef3"
+        }
+    }
+}
