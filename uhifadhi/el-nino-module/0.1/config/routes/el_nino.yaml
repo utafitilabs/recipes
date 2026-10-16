@@ -1,0 +1,11 @@
+# El Niño watch screens (uhifadhi/el-nino-module) — the overview and the
+# week-by-week walk under their area, /areas/{uuid}/modules/elnino/…, the
+# producer section's writes, and the ingest door the producer posts to at
+# /el-nino/ingest.
+#
+# The addresses are the controllers' own, declared as attributes beside the code
+# that answers them. This file is what mounts them, and it is yours: remove the
+# import and the screens are gone from `debug:router` with nothing left behind.
+el_nino:
+    resource: '@UhifadhiElNinoBundle/src/Controller/'
+    type: attribute

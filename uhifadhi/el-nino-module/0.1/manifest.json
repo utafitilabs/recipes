@@ -1,0 +1,8 @@
+{
+    "bundles": {
+        "Uhifadhi\\ElNino\\UhifadhiElNinoBundle": ["all"]
+    },
+    "copy-from-recipe": {
+        "config/": "%CONFIG_DIR%/"
+    }
+}

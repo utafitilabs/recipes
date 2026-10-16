@@ -1,0 +1,40 @@
+# El Niño watch (uhifadhi/el-nino-module) — the Pacific this week, the chance
+# El Niño lasts into the short rains, the rain of the last weeks over an area,
+# and who loses road access if it floods: one bulletin a week, posted by the
+# producer each area names on its configure page.
+#
+# NOTHING BELOW IS REQUIRED. Every key has a default, and the tree is CLOSED, so
+# an invented key fails at compile time rather than being ignored.
+#
+# WHAT THIS MODULE STANDS ON. Everything that is not about the watch arrives
+# with `uhifadhi/uhifadhi`: the per-area catalogue this module's tile is filed
+# in (registry), the page frame (shell), the ground and its overview (area) and
+# the maps and charts every plate draws with (atlas).
+el_nino:
+    # Which catalogue category the El Niño watch tile is filed under in every
+    # area. PRESSURE, because a flood season is pressure ON the ground and the
+    # people who work it, not the rangers' own work.
+    module_category: pressure
+
+    # The most bytes one part of a producer's push may carry. The susceptibility
+    # polygons alone are about two megabytes; sixteen leaves room.
+    ingest_body_cap: 16777216
+
+    # How many of the weeks a bulletin carries the week-by-week tab walks through.
+    weeks_shown: 26
+
+# ---------------------------------------------------------------------------
+# THE ONE LINE THIS INSTALLATION WRITES ITSELF, in config/packages/security.yaml.
+#
+# The producer posts its bulletin to /el-nino/ingest, and a producer is not a
+# person: the bearer token issued on the module's configure page is the whole
+# of its authentication. A recipe cannot edit the access rules — they are the
+# installation's own, by Symfony's design — so open the address above the
+# catch-all yourself:
+#
+#   access_control:
+#       - { path: ^/el-nino/ingest$, roles: PUBLIC_ACCESS }
+#       …
+#       - { path: ^/, roles: ROLE_USER }
+#
+# Without it a producer's push is turned away at the sign-in form.
